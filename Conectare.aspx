@@ -9,9 +9,9 @@
             <div id="conectare">
                 <h2>  Conectare </h2>
                 <br>
-                <asp:Login ID="Login1" runat="server" PasswordLabelText="Parola" LoginButtonText="Conectare" UserNameLabelText="Utilizator" TextBoxStyle-CssClass="form-control" TitleText=""></asp:Login>
-                </br>
-                <h4 style="margin-left:30px;"> * Campuri obligatorii </h4>   
+                <asp:Login ID="Login1" runat="server" PasswordLabelText="Parola" LoginButtonText="Conectare" UserNameLabelText="Utilizator" TextBoxStyle-CssClass="form-control" TitleText="" DestinationPageUrl="~/Default.aspx"  Font-Size="Large"></asp:Login>
+               <!-- </br>
+                <h4 style="margin-left:30px;"> * Campuri obligatorii </h4>   -->
             </div>
         </div>
     </div>
