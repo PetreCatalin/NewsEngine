@@ -41,13 +41,13 @@
                      <li><a href="#">Tehnologie</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Editor de stiri</a></li>
+                <li><a href="Editor.aspx">Editor de stiri</a></li>
               </ul>
 
                 <asp:LoginView ID="LoginView1" runat="server">
                    <LoggedInTemplate>
                         <ul class="nav navbar-nav navbar-right">
-                            <li style="color:greenyellow; font-size:150%; padding-right:40px; margin-top:10px;"> Conectat ca <asp:LoginName ID="LoginName1" runat="server" /> </li>
+                            <li style="color:greenyellow; font-size:150%; padding-right:40px; margin-top:10px;"> Conectat ca: <asp:LoginName ID="LoginName1" runat="server" /> </li>
                             <li> <asp:LoginStatus ID="LoginStatus1" runat="server" /> </li>
                         </ul>
                     </LoggedInTemplate>
