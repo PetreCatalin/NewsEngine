@@ -14,6 +14,15 @@
     <asp:HtmlEditorExtender ID="HtmlEditorExtender1" EnableSanitization="false" TargetControlID="TextBox1" runat="server"></asp:HtmlEditorExtender>
     <br /> <br />
 
+    <p style="margin-left:34%;">
+        Titlul Stirii: <input type="text" id="titlu" name="fname" style="width:400px;"><br>
+    </p>
+    </br>
+    <p style="margin-left:43%;">
+         Selectati o poza reprezentativa: <input type="file" id="poza" name="img">
+    </p>
+    <br />
+
     <p style="margin-left:43%;">
         Alegeti o categorie: 
         <asp:DropDownList ID="DropDownList1" runat="server">
