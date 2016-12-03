@@ -15,13 +15,14 @@
     <br /> <br />
 
     <p style="margin-left:34%;">
-        Titlul Stirii: <input type="text" id="titlu" name="fname" style="width:400px;"><br>
+        Titlul Stirii: <input type="text" id="titlu" name="fname" style="width:400px;" runat="server" /><br>
     </p>
     </br>
     <p style="margin-left:43%;">
-         Selectati o poza reprezentativa: <input type="file" id="poza" name="img">
+         Selectati o poza reprezentativa: <asp:FileUpload ID="FileUpload1" runat="server" />
     </p>
     <br />
+
 
     <p style="margin-left:43%;">
         Alegeti o categorie: 
@@ -35,6 +36,7 @@
     <p style="margin-left:47%;">
         <asp:Button ID="Button1" runat="server" Text="Adaugare Stire" OnClick="Button1_Click"/>
     </p>
+
 
 </asp:Content>
 
