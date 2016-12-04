@@ -12,7 +12,13 @@
     <asp:TextBox ID="TextBox1" Rows="20" Columns="200" TextMode="MultiLine" runat="server" BorderStyle="Solid" BorderColor="#000099" BorderWidth="20px"></asp:TextBox>
 
     <asp:HtmlEditorExtender ID="HtmlEditorExtender1" EnableSanitization="false" TargetControlID="TextBox1" runat="server"></asp:HtmlEditorExtender>
-    <br /> <br />
+    <br />
+
+     <div id="mesajDiv" style="visibility:hidden;" runat="server" />
+        <strong id="mesaj" runat="server" style="margin-left:35%;font-size:200%;color:red;"/>  </strong>
+     </div>
+
+    <br />
 
     <p style="margin-left:34%;">
         Titlul Stirii: <input type="text" id="titlu" name="fname" style="width:400px;" runat="server" /><br>
@@ -22,7 +28,6 @@
          Selectati o poza reprezentativa: <asp:FileUpload ID="FileUpload1" runat="server" />
     </p>
     <br />
-
 
     <p style="margin-left:43%;">
         Alegeti o categorie: 
@@ -36,6 +41,7 @@
     <p style="margin-left:47%;">
         <asp:Button ID="Button1" runat="server" Text="Adaugare Stire" OnClick="Button1_Click"/>
     </p>
+    
 
 
 </asp:Content>
