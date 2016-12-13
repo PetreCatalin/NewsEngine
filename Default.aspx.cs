@@ -12,6 +12,11 @@ using System.Web.UI.HtmlControls;
 
 public partial class _Default : System.Web.UI.Page
 {
+    int[] ids, ids1, ids2;
+    string[] titles, titles1, titles2;
+    string[] photos, photos1, photos2;
+    DateTime[] dates, dates1, dates2;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
@@ -38,17 +43,17 @@ public partial class _Default : System.Web.UI.Page
         dataTable.Load(queryCommandReader);
 
         int numarLinii = dataTable.Rows.Count;
-        int[] ids = new int[numarLinii + 5];
-        string[] titles = new string[numarLinii + 5];
-        string[] photos = new string[numarLinii + 5];
-        DateTime[] dates = new DateTime[numarLinii + 5];
+        ids = new int[numarLinii + 5];
+        titles = new string[numarLinii + 5];
+        photos = new string[numarLinii + 5];
+        dates = new DateTime[numarLinii + 5];
 
         for (int i = 0; i < numarLinii; i++)
         {
             ids[i] = (int)dataTable.Rows[i]["Id"];
             titles[i] = (String)dataTable.Rows[i]["Titlu"];
             photos[i] = (String)dataTable.Rows[i]["Poza"];
-            dates[i] = (DateTime) dataTable.Rows[i]["DataAdaugare"];
+            dates[i] = (DateTime)dataTable.Rows[i]["DataAdaugare"];
             //Response.Write(ids[i] + " " + titles[i] + " " + photos[i] + " " + dates[i]+" ");
         }
 
@@ -63,7 +68,9 @@ public partial class _Default : System.Web.UI.Page
         sport2img.Src = "~/Imagini/" + photos[1];
         sport2h.InnerHtml = titles[1];
         sport2ad.InnerHtml = "Stire adaugata la " + dates[1];
-
+        sport3img.Src = "~/Imagini/" + photos[2];
+        sport3h.InnerHtml = titles[2];
+        sport3ad.InnerHtml = "Stire adaugata la " + dates[2];
 
 
         //categoria stiinta
@@ -75,10 +82,10 @@ public partial class _Default : System.Web.UI.Page
         dataTable1.Load(queryCommandReader1);
 
         int numarLinii1 = dataTable1.Rows.Count;
-        int[] ids1 = new int[numarLinii1 + 5];
-        string[] titles1 = new string[numarLinii1 + 5];
-        string[] photos1 = new string[numarLinii1 + 5];
-        DateTime[] dates1 = new DateTime[numarLinii1 + 5];
+        ids1 = new int[numarLinii1 + 5];
+        titles1 = new string[numarLinii1 + 5];
+        photos1 = new string[numarLinii1 + 5];
+        dates1 = new DateTime[numarLinii1 + 5];
 
         for (int i = 0; i < numarLinii1; i++)
         {
@@ -86,12 +93,15 @@ public partial class _Default : System.Web.UI.Page
             titles1[i] = (String)dataTable1.Rows[i]["Titlu"];
             photos1[i] = (String)dataTable1.Rows[i]["Poza"];
             dates1[i] = (DateTime)dataTable1.Rows[i]["DataAdaugare"];
-           // Response.Write(ids1[i] + " " + titles1[i] + " " + photos1[i] + " " + dates1[i]+" ");
+            // Response.Write(ids1[i] + " " + titles1[i] + " " + photos1[i] + " " + dates1[i]+" ");
         }
 
         stiinta1img.Src = "~/Imagini/" + photos1[0];
         stiinta1h.InnerHtml = titles1[0];
         stiinta1ad.InnerHtml = "Stire adaugata la " + dates1[0];
+        stiinta2img.Src = "~/Imagini/" + photos1[1];
+        stiinta2h.InnerHtml = titles1[1];
+        stiinta2ad.InnerHtml = "Stire adaugata la " + dates1[1];
 
 
 
@@ -104,10 +114,10 @@ public partial class _Default : System.Web.UI.Page
         dataTable2.Load(queryCommandReader2);
 
         int numarLinii2 = dataTable2.Rows.Count;
-        int[] ids2 = new int[numarLinii2 + 5];
-        string[] titles2 = new string[numarLinii2 + 5];
-        string[] photos2 = new string[numarLinii2 + 5];
-        DateTime[] dates2 = new DateTime[numarLinii2 + 5];
+        ids2 = new int[numarLinii2 + 5];
+        titles2 = new string[numarLinii2 + 5];
+        photos2 = new string[numarLinii2 + 5];
+        dates2 = new DateTime[numarLinii2 + 5];
 
         for (int i = 0; i < numarLinii2; i++)
         {
@@ -121,7 +131,83 @@ public partial class _Default : System.Web.UI.Page
         tehnologie1img.Src = "~/Imagini/" + photos2[0];
         tehnologie1h.InnerHtml = titles2[0];
         tehnologie1ad.InnerHtml = "Stire adaugata la " + dates2[0];
+        tehnologie2img.Src = "~/Imagini/" + photos2[1];
+        tehnologie2h.InnerHtml = titles2[1];
+        tehnologie2ad.InnerHtml = "Stire adaugata la " + dates2[1];
 
         con.Close();
+
+    }
+
+    protected void btnSessionState_Click1(object sender, EventArgs e)
+    {
+        Session["Id"] = ids[0];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click2(object sender, EventArgs e)
+    {
+        Session["Id"] = ids[1];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click3(object sender, EventArgs e)
+    {
+        Session["Id"] = ids[2];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click4(object sender, EventArgs e)
+    {
+        Session["Id"] = ids[3];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click5(object sender, EventArgs e)
+    {
+        Session["Id"] = ids1[0];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click6(object sender, EventArgs e)
+    {
+        Session["Id"] = ids1[1];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click7(object sender, EventArgs e)
+    {
+        Session["Id"] = ids1[2];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click8(object sender, EventArgs e)
+    {
+        Session["Id"] = ids1[3];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click9(object sender, EventArgs e)
+    {
+        Session["Id"] = ids2[0];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click10(object sender, EventArgs e)
+    {
+        Session["Id"] = ids2[1];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click11(object sender, EventArgs e)
+    {
+        Session["Id"] = ids2[2];
+        Response.Redirect("News.aspx");
+    }
+
+    protected void btnSessionState_Click12(object sender, EventArgs e)
+    {
+        Session["Id"] = ids2[3];
+        Response.Redirect("News.aspx");
     }
 }
