@@ -51,7 +51,17 @@
                           <li><a href="Editor.aspx">Editor de stiri</a></li>
                       </LoggedInTemplate>
                   </asp:LoginView>
-               
+                  
+                  <asp:LoginView ID="LoginView3" runat="server">
+                      <RoleGroups>
+                          <asp:RoleGroup Roles="Editor,Utilizator Inregistrat">
+                          </asp:RoleGroup>
+                      </RoleGroups>
+                      <LoggedInTemplate>
+                          <li><a href="Drepturi.aspx">Lista Utilizatorilor</a></li>
+                      </LoggedInTemplate>
+                  </asp:LoginView>
+                             
               </ul>
 
                 <asp:LoginView ID="LoginView1" runat="server">

@@ -8,7 +8,6 @@
     <br /><br />
     <h1 id="titlu" style="color:red;margin-left:30%;margin-right:30%;font-size:300%;font-style:oblique;" runat="server" /> </h1>
 
-
     <br /> <br />
     <div class="container">
       <div class="jumbotron" id="continut" runat="server" />       

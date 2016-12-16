@@ -41,7 +41,7 @@
         
     </div>
 
-    <br /> <hr /> 
+    <br /> <hr />
     <div id="divStiinta" runat="server" />
         <h2 style="padding-left:10%;color:deepskyblue;font-style:oblique;" > Stiinta </h2>
 
