@@ -71,6 +71,9 @@ public partial class _Default : System.Web.UI.Page
         sport3img.Src = "~/Imagini/" + photos[2];
         sport3h.InnerHtml = titles[2];
         sport3ad.InnerHtml = "Stire adaugata la " + dates[2];
+        sport4img.Src = "~/Imagini/" + photos[3];
+        sport4h.InnerHtml = titles[3];
+        sport4ad.InnerHtml = "Stire adaugata la " + dates[3];
 
 
         //categoria stiinta
@@ -102,6 +105,9 @@ public partial class _Default : System.Web.UI.Page
         stiinta2img.Src = "~/Imagini/" + photos1[1];
         stiinta2h.InnerHtml = titles1[1];
         stiinta2ad.InnerHtml = "Stire adaugata la " + dates1[1];
+        stiinta3img.Src = "~/Imagini/" + photos1[2];
+        stiinta3h.InnerHtml = titles1[2];
+        stiinta3ad.InnerHtml = "Stire adaugata la " + dates1[2];
 
 
 
@@ -134,6 +140,9 @@ public partial class _Default : System.Web.UI.Page
         tehnologie2img.Src = "~/Imagini/" + photos2[1];
         tehnologie2h.InnerHtml = titles2[1];
         tehnologie2ad.InnerHtml = "Stire adaugata la " + dates2[1];
+        tehnologie3img.Src = "~/Imagini/" + photos2[2];
+        tehnologie3h.InnerHtml = titles2[2];
+        tehnologie3ad.InnerHtml = "Stire adaugata la " + dates2[2];
 
         con.Close();
 
