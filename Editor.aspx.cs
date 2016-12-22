@@ -17,7 +17,7 @@ public partial class Editor : System.Web.UI.Page
     {
         var title = titlu.Value;
         var categorie = DropDownList1.SelectedValue;
-        DateTime data = DateTime.Today;
+        DateTime data = DateTime.Now;
         var continut = TextBox1.Text;
         var imagine = FileUpload1.FileName;
         /*  if (FileUpload1.HasFile)

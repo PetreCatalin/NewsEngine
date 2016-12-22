@@ -93,8 +93,8 @@
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"> 
         </asp:ContentPlaceHolder>
 
-    <footer style="margin-left:38%;padding-top:3%;color:midnightblue;">
-        <h3> &copy; Copyright Petre Iulian Catalin </h3>
+    <footer style="margin-top:5%;color:midnightblue;margin-bottom:3%;">
+        <h3 style="margin-left:38%;"> &copy; Copyright Petre Iulian Catalin </h3>
     </footer>   
     </div>
     </form>
