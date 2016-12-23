@@ -37,19 +37,9 @@ public partial class News : System.Web.UI.Page
         DataTable dataTable1 = new DataTable();
         dataTable1.Load(queryCommandReader1);
 
-        int numarLinii = dataTable1.Rows.Count;
-        String [] comentariu = new string[numarLinii + 5];
-        String [] utilizator = new string[numarLinii + 5];
-        DateTime [] data = new DateTime[numarLinii + 5];
-
-        for (int i = 0; i < numarLinii; i++)
-        {
-            comentariu[i] = (String) dataTable1.Rows[i]["Comentariu"];
-            utilizator[i] = (String)dataTable1.Rows[i]["Utilizator"];
-            data[i] = (DateTime)dataTable1.Rows[i]["Data"];
-            //Response.Write(comentariu[i] + " " + utilizator[i] + " " + data[i] + " ");
-        }
-
+        //Punem datele in Repeater
+        Repeater1.DataSource = dataTable1;
+        Repeater1.DataBind();
         con.Close();
     }
 
@@ -60,7 +50,7 @@ public partial class News : System.Web.UI.Page
         var comentariu = tb.Text;
         DateTime data = DateTime.Now;
         var idStire = Session["Id"];
-        var numeUtilizator = HttpContext.Current.User.Identity.Name;
+        var numeUtilizator = HttpContext.Current.User.Identity.Name; //numele utilizatorului curent logat
 
        // Response.Write(numeUtilizator);
 
@@ -82,7 +72,8 @@ public partial class News : System.Web.UI.Page
             cmd.ExecuteNonQuery();
             con.Close();
 
-            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Comentariul a fost adaugat cu succes!')", true);
+            Response.Redirect("News.aspx");
+            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Comentariul a fost adaugat cu succes!')", true);
             tb.Text = "";
         }  
    
