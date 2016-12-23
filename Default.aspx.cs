@@ -108,7 +108,9 @@ public partial class _Default : System.Web.UI.Page
         stiinta3img.Src = "~/Imagini/" + photos1[2];
         stiinta3h.InnerHtml = titles1[2];
         stiinta3ad.InnerHtml = "Stire adaugata la " + dates1[2];
-
+        stiinta4img.Src = "~/Imagini/" + photos1[3];
+        stiinta4h.InnerHtml = titles1[3];
+        stiinta4ad.InnerHtml = "Stire adaugata la " + dates1[3];
 
 
         //categoria tehnologie
@@ -143,6 +145,9 @@ public partial class _Default : System.Web.UI.Page
         tehnologie3img.Src = "~/Imagini/" + photos2[2];
         tehnologie3h.InnerHtml = titles2[2];
         tehnologie3ad.InnerHtml = "Stire adaugata la " + dates2[2];
+        tehnologie4img.Src = "~/Imagini/" + photos2[3];
+        tehnologie4h.InnerHtml = titles2[3];
+        tehnologie4ad.InnerHtml = "Stire adaugata la " + dates2[3];
 
         con.Close();
 
