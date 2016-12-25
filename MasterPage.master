@@ -37,9 +37,9 @@
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Categorii <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Sport</a></li>
-                    <li><a href="#">Stiinta</a></li>
-                     <li><a href="#">Tehnologie</a></li>
+                    <li><a href="Sport.aspx">Sport</a></li>
+                    <li><a href="Stiinta.aspx">Stiinta</a></li>
+                     <li><a href="Tehnologie.aspx">Tehnologie</a></li>
                   </ul>
                 </li>
                   <asp:LoginView ID="LoginView2" runat="server">
