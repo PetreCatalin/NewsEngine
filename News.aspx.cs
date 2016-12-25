@@ -14,7 +14,7 @@ public partial class News : System.Web.UI.Page
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
         con.Open();
 
-        string query = "SELECT Titlu,Poza,HtmlContent FROM Stiri WHERE Id = "+Session["Id"];
+        string query = "SELECT Titlu,Poza,HtmlContent FROM Stiri WHERE Id = " +Session["Id"];
         SqlCommand cmd = new SqlCommand(query, con);
         SqlDataReader queryCommandReader = cmd.ExecuteReader();
 
