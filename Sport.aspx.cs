@@ -22,7 +22,11 @@ public partial class Sport : System.Web.UI.Page
 
         int numarLinii = dataTable.Rows.Count;
         for (int i = 0; i < numarLinii; i++)
+        {
             dataTable.Rows[i]["Poza"] = "Imagini/" + dataTable.Rows[i]["Poza"];
+            // var titlu = (String) dataTable.Rows[i]["Titlu"];
+            // Session[titlu] = dataTable.Rows[i]["Id"];
+        }
 
         Repeater1.DataSource = dataTable;
         Repeater1.DataBind();
@@ -32,7 +36,7 @@ public partial class Sport : System.Web.UI.Page
     protected void schimb_sortare(object sender, EventArgs e)
     {
         var alegere = DropDownList1.SelectedValue;
-        if (alegere=="DataAdaugarii")
+        if (alegere == "DataAdaugarii")
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
             con.Open();
@@ -72,10 +76,16 @@ public partial class Sport : System.Web.UI.Page
         }
     }
 
-
     protected void Button1_Click(object sender, EventArgs e)
     {
-       // Session["Id"] = Eval("Id");
+        //selectam butonul pe care am dat click si ii luam valoarea din CommandArgument
+        var button = (Button)sender;
+        string id = button.CommandArgument;
+       // Response.Write(id);
+       /* HiddenField hidUserID = (HiddenField)Repeater1.Items[1].FindControl("HidUserID"); asa luam fiecare item din repeater
+        string userID = hidUserID.Value; */
+        Session["Id"] = int.Parse(id);
         Response.Redirect("News.aspx");
     }
+
 }

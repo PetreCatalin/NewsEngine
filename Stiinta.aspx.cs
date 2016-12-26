@@ -72,4 +72,13 @@ public partial class Stiinta : System.Web.UI.Page
         }
     }
 
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        //selectam butonul pe care am dat click si ii luam valoarea din CommandArgument
+        var button = (Button)sender;
+        string id = button.CommandArgument;
+        Session["Id"] = int.Parse(id);
+        Response.Redirect("News.aspx");
+    }
+
 }
