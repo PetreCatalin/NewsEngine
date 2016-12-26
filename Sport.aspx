@@ -22,10 +22,11 @@
                <br /><br />
                <h4 style="margin-left:20%;margin-right:20%;"/> Stire adaugata la <%# Eval("DataAdaugare") %> </h4>
                <br /><br />
-               <p style="margin-left:18%;">         <!-- cu < % #      % > putem scrie continut c# -->
-               <asp:Button ID="Button1" runat="server" Text="Cititi Stirea" CssClass="col-md-offset-4" ForeColor="Blue" OnClick="Button1_Click" />
+               <p style="margin-left:18%;">         <!-- cu < % #      % > putem scrie continut c#,folosim CommandArgument ca un identificator unic pentru fiecare buton din Repeater -->
+               <asp:Button ID="Button1" runat="server" Text="Cititi Stirea" CssClass="col-md-offset-4" ForeColor="Blue" OnClick="Button1_Click" CommandArgument='<%#Eval("Id") %>' />
                </p>
                <br />
+              <!-- <asp:HiddenField ID="HidUserID" Value='<%#Eval("Id") %>' runat="server"></asp:HiddenField> -->
            </div>
         </ItemTemplate>
     </asp:Repeater>
