@@ -17,7 +17,7 @@
     </asp:ContentPlaceHolder>
 </head>
 
-<body style="background-color:blanchedalmond">
+<body style="background-color:chartreuse">
     <form id="form1" runat="server">
     <div>
        
@@ -80,10 +80,10 @@
                 </asp:LoginView>
                 
                     <div class="input-group" style="width:30%;">
-                        <input type="text" class="form-control" placeholder="Cautati o stire" name="srch-term" id="srch-term">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
+                        <input type="text" class="form-control" placeholder="Cautati o stire" name="srch-term" id="search" runat="server" />
+                       <p style="margin-left:100%;">
+                           <asp:Button ID="Button1" runat="server" Text="Cauta Stirea" CssClass="btn" OnClick="Button1_Click" />
+                       </p> 
                     </div>
                   
             </div>
