@@ -8,8 +8,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <h1 style="color:red; text-align:center; margin-bottom:20px;"> Adaugati o stire noua </h1>
+    <p style="background-color:white;">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <asp:TextBox ID="TextBox1" Rows="20" Columns="200" TextMode="MultiLine" runat="server" BorderStyle="Solid" BorderColor="#000099" BorderWidth="20px"></asp:TextBox>
+    <asp:TextBox ID="TextBox1" Rows="20" Columns="203" TextMode="MultiLine" runat="server" BorderStyle="Solid" BorderColor="#000099" BorderWidth="20px" BackColor="White"></asp:TextBox>
 
     <asp:HtmlEditorExtender ID="HtmlEditorExtender1" EnableSanitization="false" TargetControlID="TextBox1" runat="server"></asp:HtmlEditorExtender>
     <br />
@@ -17,7 +18,7 @@
      <div id="mesajDiv" style="visibility:hidden;" runat="server" />
         <strong id="mesaj" runat="server" style="margin-left:35%;font-size:200%;color:red;"/>  </strong>
      </div>
-
+    </p>
     <br />
 
     <p style="margin-left:34%;">

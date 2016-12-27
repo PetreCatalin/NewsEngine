@@ -24,7 +24,7 @@
 
     <asp:Repeater ID="Repeater1" runat="server">
         <ItemTemplate>
-            <div style="margin-left:13%;margin-top:1%;border: 2px solid deepskyblue;  border-radius: 25px; background-color:#73AD21;margin-right:13%;">
+            <div style="margin-left:13%;margin-top:1%;border: 2px solid deepskyblue;  border-radius: 25px; background-color:red;margin-right:13%;">
                 <p style="margin-left:5%;color:aqua;margin-top:0.5%;font-size:150%;"> <%# Eval("Comentariu") %> </p>
                 <p style="margin-left:5%;"> Comentariu adaugat de <%# Eval("Utilizator") %> la data de <%# Eval("Data") %> </p>
             </div>
