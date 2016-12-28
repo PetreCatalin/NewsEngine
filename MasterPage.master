@@ -44,22 +44,22 @@
                 </li>
                   <asp:LoginView ID="LoginView2" runat="server">
                       <RoleGroups>
-                          <asp:RoleGroup Roles="Administrator,Utilizator Inregistrat">
+                          <asp:RoleGroup Roles="Editor">
+                              <ContentTemplate>
+                                  <li><a href="Editor.aspx">Editor de stiri</a></li>
+                              </ContentTemplate>
                           </asp:RoleGroup>
                       </RoleGroups>
-                      <LoggedInTemplate>
-                          <li><a href="Editor.aspx">Editor de stiri</a></li>
-                      </LoggedInTemplate>
                   </asp:LoginView>
                   
                   <asp:LoginView ID="LoginView3" runat="server">
                       <RoleGroups>
-                          <asp:RoleGroup Roles="Editor,Utilizator Inregistrat">
+                          <asp:RoleGroup Roles="Administrator">
+                              <ContentTemplate>
+                                  <li><a href="Drepturi.aspx">Lista Utilizatori</a></li>
+                              </ContentTemplate>
                           </asp:RoleGroup>
                       </RoleGroups>
-                      <LoggedInTemplate>
-                          <li><a href="Drepturi.aspx">Lista Utilizatorilor</a></li>
-                      </LoggedInTemplate>
                   </asp:LoginView>
                              
               </ul>

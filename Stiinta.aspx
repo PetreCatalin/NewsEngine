@@ -25,6 +25,17 @@
                <asp:Button ID="Button1" runat="server" Text="Cititi Stirea" CssClass="col-md-offset-4" ForeColor="Blue" OnClick="Button1_Click" CommandArgument='<%#Eval("Id") %>' />
                </p>
                <br />
+               <p style="margin-left:44%;">
+               <asp:LoginView ID="LoginView2" runat="server">
+                      <RoleGroups>
+                          <asp:RoleGroup Roles="Editor">
+                              <ContentTemplate>
+                                  <asp:Button ID="Button2" runat="server" Text="Stergeti Stirea" CssClass="btn-danger" CommandArgument='<%#Eval("Id") %>' OnClick="Button2_Click" OnClientClick="return confirm('Are you sure you want delete this news?');"/>
+                              </ContentTemplate>
+                          </asp:RoleGroup>
+                      </RoleGroups>
+               </asp:LoginView>
+               </p>
            </div>
         </ItemTemplate>
     </asp:Repeater>
