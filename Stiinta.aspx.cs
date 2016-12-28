@@ -81,4 +81,19 @@ public partial class Stiinta : System.Web.UI.Page
         Response.Redirect("News.aspx");
     }
 
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        var button = (Button)sender;
+        string id = button.CommandArgument;
+
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True");
+        con.Open();
+        string query = "DELETE FROM STIRI WHERE Id=" + id;
+        SqlCommand cmd = new SqlCommand(query, con);
+        cmd.ExecuteNonQuery();
+        con.Close();
+
+        Response.Redirect("Stiinta.aspx");
+    }
+
 }
